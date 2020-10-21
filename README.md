@@ -2,4 +2,4 @@
 Randomizes christmas lists drawing
 
 Run it here:
-https://pl.kotl.in/lVz2BW6gp
+https://pl.kotl.in/zP_vS4EXY
