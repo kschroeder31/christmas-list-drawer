@@ -1,3 +1,14 @@
+2021
+Kevin has [Audrey, Holly]
+Ana has [Chad, Kyle]
+Chad has [Audrey, Brandon]
+Holly has [Ana, Kyle]
+Brandon has [Kevin, Chad]
+Kyle has [Ana, Holly]
+Audrey has [Kevin, Brandon]
+
+
+2020 list
 Kevin has [Brandon, Audrey]
 Ana has [Kyle, Holly]
 Chad has [Kevin, Audrey]
