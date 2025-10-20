@@ -3,10 +3,11 @@ fun main() {
     do {
         iterations++
         var households = listOf(
-            Household("Kevin", "Ana"),
-            Household("Chad"),
-            Household("Holly", "Brandon"),
-            Household("Kyle", "Audrey")
+            Household(listOf(Person("Kevin", 2), Person("Ana"))),
+            household("Chad"),
+            household("Holly", "Brandon"),
+            household("Kyle", "Audrey"),
+            household("Mary", "Rod")
         )
         var piecesOfPaper = mutableListOf<String>()
         households.forEach { household -> household.people.forEach { person -> repeat(person.entries) { piecesOfPaper.add(person.name) }}}
@@ -35,11 +36,10 @@ fun main() {
     println("It took $iterations iterations.")
 }
 
+fun household(vararg peopleStrings: String) = Household(peopleStrings.map { Person(it) })
 data class Household(val people: List<Person>){
-    constructor(vararg peopleStrings: String): this(peopleStrings.map { Person(it) })
-
     fun allNames() = people.map { it.name }
     fun allSelections() = people.flatMap { it.selections }
 }
 
-data class Person(val name: String, val entries: Int = 2, val selections: MutableList<String> = mutableListOf())
+data class Person(val name: String, val entries: Int = 3, val selections: MutableList<String> = mutableListOf())
